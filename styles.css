@@ -1,0 +1,155 @@
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 18px 0 rgba(0,0,0,0.85);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#content {
+    background-color: white;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#footer {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 100%;
+    bottom: 0;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.nav-button {
+    display: flex;
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 100px;
+    border-style: solid;;
+    border-width: 2px 2px 2px 2px;
+    border-color: white;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.nav-button:hover {
+    background-color: white;
+    color: black;
+    transition: 0.2s;
+}
+
+.nav-button.active {
+    background-color: white;
+    color: black;
+}
+
+.blog-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 32px 28px 24px 28px;
+    font-family: 'Josefin Sans', Arial, sans-serif;
+}
+.blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+.blog-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222;
+}
+.blog-date {
+    font-size: 1rem;
+    color: #888;
+    font-style: italic;
+}
+.blog-body p {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    padding: 0px 40px 5px 40px !important
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    color: black;
+    font-size: 40px;
+    margin: 0px;
+    padding: 40px;
+}
+
+p {
+    color: black;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px 40px 20px 40px;
+}
+
+li {
+    margin-left: 40px;
+}
+
+.spacer {
+    height: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: green;
+    color: white;
+    transition: 0.2s;
+}

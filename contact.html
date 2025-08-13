@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar">
+        <a class="nav-button" href="index.html">Home</a>
+        <a class="nav-button" href="blog.html">Blog</a>
+        <a class="nav-button" href="services.html">Services</a>
+        <a class="nav-button active" style="margin-right: 0px !important" href="contact.html">Contact</a>
+    </div>
+    <div id="content">
+        <h1>Contact Me</h1>
+        <form id="contact-form"> 
+            <input type="text" id="name" name="name" placeholder="Name" required><br><br>
+            <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+            <textarea id="message" name="message" rows="4" cols="50" placeholder="Introduce yourself!" required></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <div class="spacer"></div>
+    </div>
+    <div id="footer">
+        <p style="color: white">Jesse Wood, Real Estate Agent</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("dihq-xNhA0J0TDCAC"); // Found in EmailJS dashboard
+        })();
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent page reload
+
+            emailjs.send("service_uq2gluo", "template_bft911m", {
+                from_name: document.getElementById('name').value,
+                reply_to: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            })
+            .then(function(response) {
+                alert('✅ Message sent successfully!');
+                console.log('SUCCESS!', response.status, response.text);
+                document.getElementById('contact-form').reset(); // Clear form
+            }, function(error) {
+                alert('❌ Failed to send message.');
+                console.log('FAILED...', error);
+            });
+        });
+    </script>
+</body>
+</html>
